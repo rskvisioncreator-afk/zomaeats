@@ -2345,6 +2345,11 @@ a.order-card:hover {
     font-size: clamp(38px, 7vw, 56px);
   }
 
+  .hero__inline-chef {
+    width: 56px;
+    height: 56px;
+  }
+
   .cart-layout,
   .checkout-layout,
   .restaurant-layout,

@@ -1427,6 +1427,8 @@
   padding: 4px 2px 10px;
   overflow-x: auto;
   scrollbar-width: none;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
 }
 
 .category-rail__scroll::-webkit-scrollbar {
@@ -1439,6 +1441,7 @@
   align-items: center;
   gap: 10px;
   flex: none;
+  scroll-snap-align: start;
 }
 
 .category-item__image {
