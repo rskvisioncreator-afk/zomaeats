@@ -1,0 +1,17 @@
+{
+  "name": "Zomaeats — Food delivery in minutes",
+  "short_name": "Zomaeats",
+  "description": "Order food from the best local kitchens. Live tracking, honest ratings, 30 minute delivery.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBF7",
+  "theme_color": "#E23744",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
