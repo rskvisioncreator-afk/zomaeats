@@ -5,9 +5,11 @@ import {
   LayoutDashboard,
   LogOut,
   MapPin,
+  Moon,
   Package,
   Search,
   ShoppingBag,
+  Sun,
   User,
   UserRound,
 } from 'lucide-react'
@@ -26,7 +28,16 @@ export function Navbar() {
   const [query, setQuery] = useState('')
   const [locationOpen, setLocationOpen] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('zomaeats-theme')
+    return saved ? saved === 'dark' : true
+  })
   const menuRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = darkMode ? 'dark' : 'light'
+    localStorage.setItem('zomaeats-theme', darkMode ? 'dark' : 'light')
+  }, [darkMode])
 
   useEffect(() => {
     if (!menuOpen) return
@@ -83,6 +94,15 @@ export function Navbar() {
           </form>
 
           <div className="navbar__actions">
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={() => setDarkMode((value) => !value)}
+              aria-label={darkMode ? 'Switch to light theme' : 'Switch to dark theme'}
+              title={darkMode ? 'Light theme' : 'Dark theme'}
+            >
+              {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
             {loading ? (
               <span className="skeleton avatar-skeleton" />
             ) : user ? (

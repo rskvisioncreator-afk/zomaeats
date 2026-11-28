@@ -79,7 +79,7 @@
   padding: 6px 10px;
   border-radius: 10px;
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--surface);
   color: var(--red);
   transition: border-color 0.18s, box-shadow 0.18s;
 }
@@ -120,7 +120,7 @@
   gap: 9px;
   height: 44px;
   padding: 0 14px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 11px;
   color: var(--muted);
@@ -149,6 +149,26 @@
   display: flex;
   align-items: center;
   gap: 14px;
+}
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--ink-2);
+  cursor: pointer;
+  transition: 0.18s var(--ease);
+}
+
+.theme-toggle:hover {
+  color: var(--red);
+  border-color: var(--red);
+  transform: rotate(-12deg);
 }
 
 .navbar__auth {
@@ -189,7 +209,7 @@
   height: 42px;
   padding: 0 14px;
   border-radius: 11px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   font-size: 13px;
   font-weight: 700;
@@ -253,7 +273,7 @@
   right: 0;
   width: 252px;
   padding: 8px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 15px;
   box-shadow: var(--shadow-lg);
@@ -357,7 +377,7 @@
   padding: 10px 11px;
   border: 1px solid var(--line);
   border-radius: 9px;
-  background: #fff;
+  background: var(--surface);
   font-size: 12px;
   font-weight: 600;
   color: var(--ink-2);
@@ -536,7 +556,7 @@
 }
 
 .restaurant-card {
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 18px;
   overflow: hidden;
@@ -583,7 +603,7 @@
   max-width: 92%;
   padding: 7px 11px;
   border-radius: 0 9px 0 0;
-  background: #fff;
+  background: var(--surface);
   color: var(--red);
   font-size: 11.5px;
   font-weight: 800;
@@ -818,7 +838,7 @@
   padding: 7px 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fff;
+  background: var(--surface);
   color: var(--red);
   font-size: 11.5px;
   font-weight: 800;
@@ -881,7 +901,7 @@
   padding: 6px 13px;
   border: 1px solid var(--line);
   border-radius: 99px;
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-2);
   font-size: 12px;
   font-weight: 600;
@@ -931,7 +951,7 @@
   padding: 6px 12px;
   border: 1px solid var(--line);
   border-radius: 99px;
-  background: #fff;
+  background: var(--surface);
   font-size: 11.5px;
   font-weight: 700;
   color: var(--ink-2);
@@ -974,7 +994,7 @@
   padding: 3px;
   border: 2px solid #fff;
   border-radius: 50%;
-  background: #fff;
+  background: var(--surface);
   box-shadow: var(--shadow-md);
   overflow: hidden;
   vertical-align: middle;
@@ -1011,7 +1031,7 @@
   padding: 7px 8px 7px 14px;
   border: 1.5px solid var(--line);
   border-radius: 16px;
-  background: #fff;
+  background: var(--surface);
   box-shadow: var(--shadow-md);
   transition: border-color 0.18s, box-shadow 0.18s;
 }
@@ -1104,7 +1124,7 @@
   padding: 5px 11px;
   border: 1px solid var(--line);
   border-radius: 99px;
-  background: #fff;
+  background: var(--surface);
   color: var(--ink-2);
   font-size: 11.5px;
   font-weight: 600;
@@ -1535,7 +1555,7 @@
 
 .collection-card:hover .collection-card__arrow {
   transform: rotate(45deg);
-  background: #fff;
+  background: var(--surface);
 }
 
 .collection-card__text strong {
@@ -1569,7 +1589,7 @@
   padding: 24px;
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: #fff;
+  background: var(--surface);
 }
 
 .step-card__number {
@@ -1746,7 +1766,7 @@
   padding: 16px;
   border: 1px dashed #e6c7a8;
   border-radius: 14px;
-  background: #fff;
+  background: var(--surface);
 }
 
 .coupon-box__label {
@@ -1871,7 +1891,7 @@
   padding: 18px 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: #fff;
+  background: var(--surface);
 }
 
 .bill__title {
@@ -1986,7 +2006,7 @@
 
 .address-card.is-active .address-card__check {
   border: 5px solid var(--red);
-  background: #fff;
+  background: var(--surface);
 }
 
 .address-card__edit {
@@ -2013,7 +2033,7 @@
   place-items: center;
   border: 1px solid var(--line);
   border-radius: 7px;
-  background: #fff;
+  background: var(--surface);
   color: var(--muted);
 }
 
@@ -2094,7 +2114,7 @@
   place-items: center;
   border: 1.5px solid var(--line);
   border-radius: 50%;
-  background: #fff;
+  background: var(--surface);
   color: var(--muted);
 }
 
@@ -2217,7 +2237,7 @@
   display: grid;
   place-items: center;
   border-radius: 11px;
-  background: #fff;
+  background: var(--surface);
   color: var(--red);
   box-shadow: var(--shadow-xs);
 }
@@ -2287,7 +2307,7 @@
   padding: 0 10px;
   border: 1px solid var(--line);
   border-radius: 9px;
-  background: #fff;
+  background: var(--surface);
   color: var(--muted);
 }
 
@@ -2314,7 +2334,7 @@
   padding: 6px 26px 6px 9px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #fff;
+  background: var(--surface);
   font-size: 11.5px;
   font-weight: 600;
   color: var(--ink-2);
