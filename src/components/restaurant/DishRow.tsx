@@ -20,7 +20,8 @@ export function DishRow({ dish, restaurant }: DishRowProps) {
       <div className="dish-row__content">
         <div className="dish-row__badges">
           <VegMark isVeg={dish.isVeg} size="sm" />
-          {dish.isBestseller && <span className="bestseller-chip">★ Bestseller</span>}
+          {dish.isBestseller && <span className="bestseller-chip">🔥 Mast Sold</span>}
+          {dish.soldOut && <span className="soldout-chip">SOLD OUT</span>}
         </div>
         <h4>{dish.name}</h4>
         <p className="dish-row__price">{formatINR(dish.price)}</p>
@@ -35,7 +36,11 @@ export function DishRow({ dish, restaurant }: DishRowProps) {
 
       <div className="dish-row__media">
         <SmartImage src={dish.image} alt={dish.name} className="dish-row__image" />
-        {item ? (
+        {dish.soldOut ? (
+          <button type="button" className="dish-add dish-add--disabled" disabled>
+            SOLD OUT
+          </button>
+        ) : item ? (
           <div className="dish-row__stepper">
             <QuantityStepper
               value={item.qty}
