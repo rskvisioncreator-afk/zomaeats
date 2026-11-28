@@ -31,6 +31,7 @@ export interface Dish {
   category: string
   isVeg: boolean
   isBestseller?: boolean
+  soldOut?: boolean
   serves?: number
   rating?: number
 }

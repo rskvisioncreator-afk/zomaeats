@@ -61,6 +61,7 @@ export function DishForm({
   const [image, setImage] = useState(initial?.image ?? '')
   const [isVeg, setIsVeg] = useState(initial?.isVeg ?? true)
   const [isBestseller, setIsBestseller] = useState(initial?.isBestseller ?? false)
+  const [soldOut, setSoldOut] = useState(initial?.soldOut ?? false)
   const [serves, setServes] = useState(initial ? String(initial.serves ?? 2) : '2')
   const [rating, setRating] = useState(initial?.rating ? String(initial.rating) : '')
   const [saving, setSaving] = useState(false)
@@ -89,6 +90,7 @@ export function DishForm({
         category,
         isVeg,
         isBestseller,
+        soldOut,
         serves: Number(serves) || 1,
         rating: rating ? Number(rating) : undefined,
       }
@@ -192,8 +194,14 @@ export function DishForm({
           <Switch
             checked={isBestseller}
             onChange={setIsBestseller}
-            label="Bestseller"
-            description="Menu me star badge milega."
+            label="Mast Sold"
+            description="Top-selling dish par 🔥 badge dikhega."
+          />
+          <Switch
+            checked={soldOut}
+            onChange={setSoldOut}
+            label="Sold out"
+            description="Customer ADD button disable ho jayega."
           />
         </div>
 

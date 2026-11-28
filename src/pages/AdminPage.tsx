@@ -446,7 +446,13 @@ export function AdminPage() {
                                   <SmartImage src={dish.image} alt={dish.name} />
                                   <div>
                                     <strong>{dish.name}</strong>
-                                    <small>{dish.isBestseller ? 'Bestseller' : 'Standard item'}</small>
+                                    <small>
+                                      {dish.soldOut
+                                        ? 'Sold out'
+                                        : dish.isBestseller
+                                          ? '🔥 Mast Sold'
+                                          : 'Standard item'}
+                                    </small>
                                   </div>
                                 </div>
                               </td>
