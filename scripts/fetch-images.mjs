@@ -1,8 +1,8 @@
 /**
  * Downloads the demo food photos into public/images.
  * Run: node scripts/fetch-images.mjs
- * Photos: Unsplash (Unsplash License) + Wikimedia Commons chef photos
- * (public domain / CC BY-SA 4.0 by Sunnya343).
+ * Photos: Unsplash (Unsplash License) + Wikimedia Commons photos
+ * (chefs: public domain / CC BY-SA 4.0 by Sunnya343; pani puri: CC0).
  */
 import { mkdir, writeFile } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
@@ -43,7 +43,6 @@ const photos = {
   waffle: 'photo-1562376552-0d160a2f238d',
   pancakes: 'photo-1528207776546-365bb710ee93',
   chai: 'photo-1571934811356-5cc061b6821f',
-  'pani-puri': 'photo-1601050690597-df0568f70950',
   restaurant: 'photo-1517248135467-4c7edcad34c4',
 }
 
@@ -58,11 +57,18 @@ const chefPhotos = {
     'https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Chef_cooking_Mysore_masala_dosa_in_Mysuru%2C_July_2013.jpg/960px-Chef_cooking_Mysore_masala_dosa_in_Mysuru%2C_July_2013.jpg',
 }
 
+// Pani puri ka sahi photo (samosa nahi). CC0, Wikimedia Commons.
+const commonsPhotos = {
+  'pani-puri':
+    'https://upload.wikimedia.org/wikipedia/commons/6/66/Pani_Puri_%28Gol_Gappa%29.jpg',
+}
+
 const sources = {
   ...Object.fromEntries(
     Object.entries(photos).map(([name, id]) => [name, `https://images.unsplash.com/${id}${query}`]),
   ),
   ...chefPhotos,
+  ...commonsPhotos,
 }
 
 await mkdir(outDir, { recursive: true })
