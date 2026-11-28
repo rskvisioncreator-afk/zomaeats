@@ -56,15 +56,15 @@ html[data-theme='dark'] {
   --gold-soft: #3a3018;
   --blue: #7ba2ff;
   --blue-soft: #1b2942;
-  --ink: #f4f1ee;
-  --ink-2: #cbc6c1;
-  --muted: #9b9590;
-  --line: #35323a;
-  --line-strong: #4a4650;
-  --bg: #111014;
-  --surface: #1b1a1f;
-  --surface-2: #232127;
-  --surface-3: #2a2830;
+  --ink: #eef7f0;
+  --ink-2: #c5d6c9;
+  --muted: #9bb3a2;
+  --line: #2a3d31;
+  --line-strong: #3f5746;
+  --bg: #0d1a13;
+  --surface: #14251b;
+  --surface-2: #1b2f23;
+  --surface-3: #253a2c;
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.35);
   --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.5);
@@ -73,11 +73,11 @@ html[data-theme='dark'] {
 
 html[data-theme='dark'] .navbar,
 html[data-theme='dark'] .menu-nav {
-  background: rgba(17, 16, 20, 0.92);
+  background: rgba(13, 26, 19, 0.92);
 }
 
 html[data-theme='dark'] .placing-overlay {
-  background: rgba(17, 16, 20, 0.65);
+  background: rgba(13, 26, 19, 0.65);
 }
 html[data-theme='dark'] .pure-veg-chip,
 html[data-theme='dark'] .favourite-button,
@@ -85,7 +85,7 @@ html[data-theme='dark'] .float-card,
 html[data-theme='dark'] .collection-card__arrow,
 html[data-theme='dark'] .restaurant-hero__back,
 html[data-theme='dark'] .mobile-nav {
-  background: rgba(27, 26, 31, 0.94);
+  background: rgba(20, 37, 27, 0.94);
 }
 
 html[data-theme='dark'] .error-state,
